@@ -14,6 +14,10 @@ class SignUp extends Component {
     this.state = {
       email: '',
       password: '',
+      username: '',
+      age: '',
+      gender: '',
+      role: '',
       passwordConfirmation: ''
     }
   }
@@ -47,7 +51,7 @@ class SignUp extends Component {
   }
 
   render () {
-    const { email, password, passwordConfirmation } = this.state
+    const { email, username, age, gender, role, password, passwordConfirmation } = this.state
 
     return (
       <div className="row">
@@ -62,6 +66,50 @@ class SignUp extends Component {
                 name="email"
                 value={email}
                 placeholder="Enter email"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="username">
+              <Form.Label>Username</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="username"
+                value={username}
+                placeholder="Enter a username"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="age">
+              <Form.Label>Age</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="age"
+                value={age}
+                placeholder="Enter age"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="gender">
+              <Form.Label>Gender</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="gender"
+                value={gender}
+                placeholder="Enter gender (optional)"
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="role">
+              <Form.Label>Role</Form.Label>
+              <Form.Control
+                required
+                type="text"
+                name="role"
+                value={role}
+                placeholder="User's Role"
                 onChange={this.handleChange}
               />
             </Form.Group>
