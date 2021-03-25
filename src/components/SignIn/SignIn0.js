@@ -51,7 +51,7 @@ class SignIn extends Component {
     return (
       <div className="signin">
         <h3>Sign In</h3>
-        <form onSubmit={this.onSignUp}>
+        <form onSubmit={this.onSignIn}>
           <div className="textcenter">
             <TextField
               id="email"
