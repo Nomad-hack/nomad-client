@@ -14,6 +14,7 @@ import MonthCalendar from './components/MonthCalendar/MonthCalendar'
 import CreateAppointment from './components/CreateAppointment/CreateAppointment'
 import AppointmentIndex from './components/AppointmentIndex/AppointmentIndex'
 import SingleAppointment from './components/SingleAppointment/SingleAppointment'
+import Dashboard from './components/Dashboard/Dashboard'
 
 class App extends Component {
   constructor (props) {
@@ -81,6 +82,9 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/appointments/:id' render={() => (
             <SingleAppointment msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/analytics' render={() => (
+            <Dashboard msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>

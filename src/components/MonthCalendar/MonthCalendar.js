@@ -7,11 +7,11 @@ import { indexAppointments } from './../../api/appointment'
 
 // const schedulerData = []
 
-// const schedulerData = [
-//   { startDate: '2021-03-25T09:45', endDate: '2021-03-25T11:00', title: 'Meeting' },
-//   { startDate: '2021-03-25T12:00', endDate: '2021-03-25T13:30', title: 'Go to a gym' },
-//   { startDate: '2021-03-25T18:00', endDate: '2021-03-25T19:00', title: 'TV Time' }
-// ]
+const schedulerData = [
+  { startDate: '2021-03-25T09:45', endDate: '2021-03-25T11:00', title: 'Kicboxing' },
+  { startDate: '2021-03-25T12:00', endDate: '2021-03-25T13:30', title: 'Running' },
+  { startDate: '2021-03-25T18:00', endDate: '2021-03-25T19:00', title: 'Fencing' }
+]
 
 const today = new Date()
 const date = ('0' + today.getDate()).slice(-2)
@@ -26,8 +26,8 @@ class Calendar extends React.PureComponent {
 
     this.state = {
       appointments: [],
-      schedulerData: []
-      // data: schedulerData
+      // schedulerData: []
+      data: schedulerData
     }
   }
 
@@ -44,7 +44,7 @@ class Calendar extends React.PureComponent {
   }
 
   render () {
-    const { appointments, schedulerData } = this.state
+    const { appointments, data } = this.state
     console.log('this is appointments', appointments)
 
     appointments.map(appointment => {
@@ -56,7 +56,7 @@ class Calendar extends React.PureComponent {
     return (
       <Paper>
         <Scheduler
-          data={schedulerData}
+          data={data}
           height={660}
         >
           <ViewState
