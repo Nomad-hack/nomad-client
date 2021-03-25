@@ -53,7 +53,7 @@ const AppointmentForm = ({ appointment, handleSubmit, handleChange }) => {
           </Form.Group>
 
           <Form.Group controlId="formBasicDuration">
-            <Form.Label>How long is the class?</Form.Label>
+            <Form.Label>What is the timeframe?</Form.Label>
             <Form.Control
               type="text"
               name="duration"

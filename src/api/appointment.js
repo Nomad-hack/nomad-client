@@ -22,7 +22,7 @@ export const indexAppointments = (user) => {
   })
 }
 
-export const showAppointment = (id, user, appointment) => {
+export const showAppointment = (id, user) => {
   return axios({
     url: apiUrl + '/appointments/' + id,
     method: 'GET',
@@ -43,9 +43,9 @@ export const updateAppointment = (appointment, user) => {
   })
 }
 
-export const deleteAppointment = user => {
+export const deleteAppointment = (id, user) => {
   return axios({
-    url: apiUrl + '/appointments',
+    url: apiUrl + '/appointments/' + id,
     method: 'DELETE',
     headers: {
       'Authorization': `Bearer ${user.token}`
