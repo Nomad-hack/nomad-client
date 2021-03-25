@@ -16,7 +16,8 @@ class CreateAppointment extends Component {
         type: '',
         instructor: '',
         date: '',
-        duration: '',
+        startTime: '',
+        endTime: '',
         cost: ''
       },
       createdId: null

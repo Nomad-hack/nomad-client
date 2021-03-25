@@ -52,12 +52,22 @@ const AppointmentForm = ({ appointment, handleSubmit, handleChange }) => {
             />
           </Form.Group>
 
-          <Form.Group controlId="formBasicDuration">
-            <Form.Label>What is the timeframe?</Form.Label>
+          <Form.Group controlId="formBasicstartTime">
+            <Form.Label>What time does it start?</Form.Label>
             <Form.Control
               type="text"
-              name="duration"
-              placeholder="What is the time block? (1:00pm - 3:00pm)"
+              name="startTime"
+              placeholder="What time does it start? (military time: 11:00)"
+              onChange={handleChange}
+            />
+          </Form.Group>
+
+          <Form.Group controlId="formBasicendTime">
+            <Form.Label>What time does it end?</Form.Label>
+            <Form.Control
+              type="text"
+              name="endTime"
+              placeholder="What time does it end? (military time: 13:00)"
               onChange={handleChange}
             />
           </Form.Group>

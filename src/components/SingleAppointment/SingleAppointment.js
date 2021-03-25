@@ -87,13 +87,13 @@ class OneAppointment extends Component {
             style={{ border: '1px solid', borderRadius: '12px', boxShadow: ' -.3px .5px 0px .5px grey', display: 'flex', marginLeft: '5px', marginRight: '5px', marginBottom: '20px', padding: '10px', width: '600px' }} >
             <Card.Body className="card-body" style={{ alignItems: 'center', display: 'flex', justifyContent: 'center', overflow: 'auto' }}>
               <div>
-                <div style={{ width: '200px' }}>
+                <div style={{ width: '300px' }}>
                   <Card.Title style={{ fontSize: '40px' }}>{appointment.title} - {appointment.type}</Card.Title>
                   <Card.Subtitle className="mb-2">Instructor: {appointment.instructor}</Card.Subtitle>
-                  <Card.Subtitle style={{ fontSize: '15px', margin: '13px 0px 13px 0px' }}>Date & Time: {appointment.date} at {appointment.duration}</Card.Subtitle>
+                  <Card.Subtitle style={{ fontSize: '15px', margin: '13px 0px 13px 0px' }}>Date & Time: {appointment.date} at {appointment.startTime}-{appointment.endTime}</Card.Subtitle>
                   <Card.Text style={{ fontSize: '15px' }}><strong>Cost: ${appointment.cost}</strong></Card.Text>
                 </div>
-                <div style={{ border: '1px solid', borderRadius: '9px', margin: '15px', padding: '20px', width: '475px' }}>
+                <div style={{ border: '1px solid', borderRadius: '9px', margin: '15px', padding: '20px', width: '300px' }}>
                   <Card.Text style={{ whiteSpace: 'pre-wrap' }}>
                     {appointment.description}
                   </Card.Text>
@@ -114,11 +114,11 @@ class OneAppointment extends Component {
                 <div style={{ width: '200px' }}>
                   <Card.Title style={{ fontSize: '40px' }}>{appointment.title}</Card.Title>
                   {/* <Button onClick={this.updateItemClicked} >Update</Button> */}
-                  <Button style={{ marginLeft: '10px' }} onClick={this.onDeleteAppointment} variant="secondary">Delete</Button>
-                  <Card.Subtitle style={{ fontSize: '15px', margin: '13px 0px 13px 0px' }}>Date & Time: {appointment.date} at {appointment.duration}</Card.Subtitle>
+                  <Button onClick={this.onDeleteAppointment} variant="secondary">Delete</Button>
+                  <Card.Subtitle style={{ fontSize: '15px', margin: '13px 0px 13px 0px' }}>Date & Time: {appointment.date} at {appointment.startTime}-{appointment.endTime}</Card.Subtitle>
                   <Card.Text style={{ fontSize: '15px' }}><strong>Cost: ${appointment.cost}</strong></Card.Text>
                 </div>
-                <div style={{ border: '1px solid', borderRadius: '9px', margin: '15px', padding: '20px', width: '475px' }}>
+                <div style={{ border: '1px solid', borderRadius: '9px', margin: '15px 15px 15px 0px', padding: '20px', width: '300px' }}>
                   <Card.Text style={{ whiteSpace: 'pre-wrap' }}>
                     {appointment.description}
                   </Card.Text>

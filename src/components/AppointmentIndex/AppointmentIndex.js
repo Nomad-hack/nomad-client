@@ -55,7 +55,7 @@ class IndexAppointments extends Component {
         className='index-bg style-card' style={{ borderRadius: '5px', margin: '40px', padding: '8px', marginTop: '10px' }}>
         <Card.Body>
           <Card.Title>{appointment.title} - {appointment.type}</Card.Title>
-          <Card.Subtitle className="mb-2 text-muted">Date & Time: {appointment.date} at {appointment.duration}</Card.Subtitle>
+          <Card.Subtitle className="mb-2 text-muted">Date & Time: {appointment.date} at {appointment.startTime}-{appointment.endTime}</Card.Subtitle>
           <Card.Subtitle className="mb-2 text-muted">Instructor: {appointment.instructor}</Card.Subtitle>
         </Card.Body>
       </Card>
