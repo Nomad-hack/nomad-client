@@ -58,7 +58,7 @@ class SignUp extends Component {
       <div className="signup">
         <h3>Sign Up</h3>
         <form onSubmit={this.onSignUp}>
-          <div>
+          <div className="textcenter">
             <TextField
               id="email"
               label='Email address'
@@ -70,10 +70,11 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div>
+          <div className="textcenter">
             <TextField
               required
               id="username"
+              label="Username"
               type="text"
               name="username"
               value={username}
@@ -81,9 +82,10 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div>
+          <div className="textcenter">
             <TextField
               required
+              label="Age"
               id="age"
               type="text"
               name="age"
@@ -92,9 +94,10 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div>
+          <div className="textcenter">
             <TextField
               id="gender"
+              label="Gender"
               type="text"
               name="gender"
               value={gender}
@@ -102,9 +105,10 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div>
+          <div className="textcenter">
             <TextField
               required
+              label="Role"
               id="role"
               type="text"
               name="role"
@@ -113,9 +117,10 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div>
+          <div className="textcenter">
             <TextField
               required
+              label="Password"
               id="password"
               name="password"
               value={password}
@@ -124,9 +129,10 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div>
+          <div className="textcenter">
             <TextField
               required
+              label="Confirm Password"
               id="passwordCornfirmation"
               name="passwordConfirmation"
               value={passwordConfirmation}
@@ -135,8 +141,8 @@ class SignUp extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div>
-            <Button variant="contained" color="primary" type="submit">
+          <div className="textcenter">
+            <Button variant="contained" color="primary" className="button" type="submit">
           Sign Up
             </Button>
           </div>

@@ -8,7 +8,7 @@ export const createAppointment = (appointment, user) => {
     headers: {
       'Authorization': `Bearer ${user.token}`
     },
-    data: { appointment: appointment }
+    data: { appointment }
   })
 }
 

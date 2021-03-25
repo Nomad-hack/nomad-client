@@ -6,6 +6,7 @@ import messages from '../AutoDismissAlert/messages'
 
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
+import './SignIn.scss'
 
 class SignIn extends Component {
   constructor (props) {
@@ -48,10 +49,10 @@ class SignIn extends Component {
     const { email, password } = this.state
 
     return (
-      <div className="field">
-        <h3>Sign Up</h3>
+      <div className="signin">
+        <h3>Sign In</h3>
         <form onSubmit={this.onSignUp}>
-          <div>
+          <div className="textcenter">
             <TextField
               id="email"
               label='Email address'
@@ -63,9 +64,10 @@ class SignIn extends Component {
               onChange={this.handleChange}
             />
           </div>
-          <div>
+          <div className="textcenter">
             <TextField
               required
+              label='Password'
               id="password"
               name="password"
               value={password}
@@ -76,7 +78,7 @@ class SignIn extends Component {
           </div>
           <div>
             <Button variant="contained" color="primary" type="submit">
-          Sign Up
+          Sign In
             </Button>
           </div>
         </form>
