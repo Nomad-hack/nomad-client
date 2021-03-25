@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom'
 import { signUp, signIn } from '../../api/auth'
 import messages from '../AutoDismissAlert/messages'
 import './SignUp.scss'
+import SVG from './pic.svg'
 
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
@@ -57,6 +58,7 @@ class SignUp extends Component {
     return (
       <div className="signup">
         <h3>Sign Up</h3>
+        <img style={{ height: '200px', width: '100px' }} src={SVG}></img>
         <form onSubmit={this.onSignUp}>
           <div className="textcenter">
             <TextField
