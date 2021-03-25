@@ -7,6 +7,7 @@ import messages from '../AutoDismissAlert/messages'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import './SignIn.scss'
+import SVG from './pic.svg'
 
 class SignIn extends Component {
   constructor (props) {
@@ -51,6 +52,7 @@ class SignIn extends Component {
     return (
       <div className="signin">
         <h3>Sign In</h3>
+        <img style={{ height: '400px', width: '200px' }} src={SVG}></img>
         <form onSubmit={this.onSignIn}>
           <div className="textcenter">
             <TextField
