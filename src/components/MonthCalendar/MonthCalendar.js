@@ -16,7 +16,6 @@ const month = ('0' + (today.getMonth() + 1)).slice(-2)
 const year = today.getFullYear()
 const currentDate = `${year}-${month}-${date}`
 // const currentDate = new Date()
-console.log('this is currentDate', currentDate)
 
 class Calendar extends React.PureComponent {
   constructor (props) {
@@ -38,7 +37,7 @@ class Calendar extends React.PureComponent {
         >
           <ViewState
             defaultCurrentDate={currentDate}
-            defaultCurrentViewName="Day"
+            defaultCurrentViewName="Week"
           />
 
           <DayView
