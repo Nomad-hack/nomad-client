@@ -58,7 +58,7 @@ class CreateAppointment extends Component {
     const { appointment, createdId } = this.state
 
     if (createdId) {
-      return <Redirect to={`/appointment/${createdId}`} />
+      return <Redirect to={`/appointments/${createdId}`} />
     }
 
     return (

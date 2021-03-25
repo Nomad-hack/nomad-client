@@ -12,6 +12,8 @@ import ChangePassword from './components/ChangePassword/ChangePassword'
 
 import MonthCalendar from './components/MonthCalendar/MonthCalendar'
 import CreateAppointment from './components/CreateAppointment/CreateAppointment'
+import AppointmentIndex from './components/AppointmentIndex/AppointmentIndex'
+import SingleAppointment from './components/SingleAppointment/SingleAppointment'
 
 class App extends Component {
   constructor (props) {
@@ -73,6 +75,12 @@ class App extends Component {
           )} />
           <AuthenticatedRoute user={user} path='/create-appointment' render={() => (
             <CreateAppointment msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/appointment-index' render={() => (
+            <AppointmentIndex msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/appointments/:id' render={() => (
+            <SingleAppointment msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>
