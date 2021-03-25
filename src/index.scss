@@ -1,1 +1,7 @@
+$primary: #8d0202;
+
 @import '~bootstrap/scss/bootstrap';
+
+.modal-bg {
+  background: $secondary;
+}

@@ -11,6 +11,7 @@ import SignOut from './components/SignOut/SignOut'
 import ChangePassword from './components/ChangePassword/ChangePassword'
 
 import MonthCalendar from './components/MonthCalendar/MonthCalendar'
+import CreateAppointment from './components/CreateAppointment/CreateAppointment'
 
 class App extends Component {
   constructor (props) {
@@ -67,8 +68,11 @@ class App extends Component {
           <AuthenticatedRoute user={user} path='/change-password' render={() => (
             <ChangePassword msgAlert={this.msgAlert} user={user} />
           )} />
-          <AuthenticatedRoute user={user} path='/day' render={() => (
+          <AuthenticatedRoute user={user} path='/calendar' render={() => (
             <MonthCalendar msgAlert={this.msgAlert} user={user} />
+          )} />
+          <AuthenticatedRoute user={user} path='/create-appointment' render={() => (
+            <CreateAppointment msgAlert={this.msgAlert} user={user} />
           )} />
         </main>
       </Fragment>

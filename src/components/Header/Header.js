@@ -1,12 +1,13 @@
 import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 
 const authenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#day">Todays Bookings</Nav.Link>
-    <Nav.Link href="#change-password">Change Password</Nav.Link>
-    <Nav.Link href="#sign-out">Sign Out</Nav.Link>
+    <Nav.Link href="#create-appointment">Book A Class</Nav.Link>
+    {/* <Nav.Link href="#change-password">Change Password</Nav.Link>
+    <Nav.Link href="#sign-out">Sign Out</Nav.Link> */}
   </Fragment>
 )
 
@@ -19,7 +20,7 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
   <Fragment>
-    <Nav.Link href="#/">Home</Nav.Link>
+    <Nav.Link href="#/calendar">Home</Nav.Link>
   </Fragment>
 )
 
@@ -31,7 +32,13 @@ const Header = ({ user }) => (
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto">
-        { user && <span className="navbar-text mr-2">Welcome, {user.username}</span>}
+        {/* // { user && <span className="navbar-text mr-2">Welcome, {user.username}</span>} */}
+        { user && <NavDropdown title={user.username} id="basic-nav-dropdown" className="dropdownitem">
+          {user.role === 'Business Owner' ? <NavDropdown.Item className="dropdownitem" href="#analytics">Get Analytics</NavDropdown.Item> : null}
+          <NavDropdown.Divider className="dropdownitem"/>
+          <NavDropdown.Item className="dropdownitem" href="#change-password">Change Password</NavDropdown.Item>
+          <NavDropdown.Item className="dropdownitem" href="#sign-out">Sign Out</NavDropdown.Item>
+        </NavDropdown>}
         { alwaysOptions }
         { user ? authenticatedOptions : unauthenticatedOptions }
       </Nav>
