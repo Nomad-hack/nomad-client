@@ -44,7 +44,7 @@ class Calendar extends React.PureComponent {
   }
 
   render () {
-    const { appointments, data } = this.state
+    const { appointments, schedulerData } = this.state
     console.log('this is appointments', appointments)
 
     appointments.map(appointment => {
@@ -56,7 +56,7 @@ class Calendar extends React.PureComponent {
     return (
       <Paper>
         <Scheduler
-          data={data}
+          data={schedulerData}
           height={660}
         >
           <ViewState
