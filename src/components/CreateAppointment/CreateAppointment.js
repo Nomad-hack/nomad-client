@@ -28,7 +28,7 @@ class CreateAppointment extends Component {
 
     this.setState((state) => {
       return {
-        item: { ...state.item, [event.target.name]: event.target.value }
+        appointment: { ...state.appointment, [event.target.name]: event.target.value }
       }
     })
   }
@@ -41,7 +41,7 @@ class CreateAppointment extends Component {
 
     createAppointment(appointment, user)
       .then(res => {
-        this.setState({ createdId: res.data.item._id })
+        this.setState({ createdId: res.data.appointment._id })
         return res
       })
       .then(res => msgAlert({

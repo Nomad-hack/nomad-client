@@ -77,7 +77,7 @@ const AppointmentForm = ({ appointment, handleSubmit, handleChange }) => {
             <Form.Control
               type="text"
               name="cost"
-              placeholder="0.00"
+              placeholder="$20"
               onChange={handleChange}
             />
           </Form.Group>
@@ -86,7 +86,7 @@ const AppointmentForm = ({ appointment, handleSubmit, handleChange }) => {
             <Form.Label>What Type Of Class:</Form.Label>
             <Form.Control
               as="select"
-              name="category"
+              name="type"
               onChange={handleChange}>
               <option>Pick One...</option>
               <option>In Person</option>
