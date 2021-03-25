@@ -1,0 +1,41 @@
+
+// *{
+//   color: white;
+// }
+.signin {
+  background: rgb(255,161,75);
+background: linear-gradient(297deg, rgba(255,161,75,1) 0%, rgba(251,134,24,1) 6%, rgba(254,172,91,1) 37%, rgba(255,193,129,1) 72%, rgba(255,126,0,1) 94%);
+  min-height: 100%;
+  text-align: center;
+}
+.textcenter {
+align-items: center;
+  text-align: center;
+}
+.MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-formControl.MuiInput-formControl {
+        color: white;
+        font-weight: 800;
+}
+
+h3 {
+  color: white;
+}
+
+button.MuiButtonBase-root.MuiButton-root.MuiButton-contained.button.MuiButton-containedPrimary {
+        background-color: #ff741d;
+        margin-top: 30px;
+}
+
+// .MuiButton-containedPrimary {
+//         color: #fff;
+//         background-color: #ff741d;
+//         margin-top: 35px;
+// }
+// @media only screen and (max-width: 425px){
+//   /*Small smartphones [325px -> 425px]*/
+//
+// .MuiButton-containedPrimary:hover {
+//       background-color: #ff741d;
+//       margin-top: 45px;
+// }
+// }
