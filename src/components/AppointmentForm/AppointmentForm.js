@@ -45,7 +45,7 @@ const AppointmentForm = ({ appointment, handleSubmit, handleChange }) => {
           <Form.Group controlId="formBasicDate">
             <Form.Label>Date</Form.Label>
             <Form.Control
-              type="text"
+              type="date"
               name="date"
               placeholder="Enter appointment date (yyyy-mm-dd)"
               onChange={handleChange}
@@ -55,7 +55,7 @@ const AppointmentForm = ({ appointment, handleSubmit, handleChange }) => {
           <Form.Group controlId="formBasicstartTime">
             <Form.Label>What time does it start?</Form.Label>
             <Form.Control
-              type="text"
+              type="time"
               name="startTime"
               placeholder="What time does it start? (military time: 11:00)"
               onChange={handleChange}
@@ -65,7 +65,7 @@ const AppointmentForm = ({ appointment, handleSubmit, handleChange }) => {
           <Form.Group controlId="formBasicendTime">
             <Form.Label>What time does it end?</Form.Label>
             <Form.Control
-              type="text"
+              type="time"
               name="endTime"
               placeholder="What time does it end? (military time: 13:00)"
               onChange={handleChange}

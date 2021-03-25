@@ -2,6 +2,7 @@ import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
 import NavDropdown from 'react-bootstrap/NavDropdown'
+import NomadLogo from './nomad_logo.png'
 
 const authenticatedOptions = (
   <Fragment>
@@ -27,7 +28,7 @@ const alwaysOptions = (
 const Header = ({ user }) => (
   <Navbar bg="primary" variant="dark" expand="md">
     <Navbar.Brand href="#">
-      Nomad_Hack
+      <img style={{ height: '50px', width: '100px' }} src={NomadLogo}></img>
     </Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
