@@ -113,7 +113,7 @@ class OneAppointment extends Component {
               <div>
                 <div style={{ width: '200px' }}>
                   <Card.Title style={{ fontSize: '40px' }}>{appointment.title}</Card.Title>
-                  <Button onClick={this.updateItemClicked} >Update</Button>
+                  {/* <Button onClick={this.updateItemClicked} >Update</Button> */}
                   <Button style={{ marginLeft: '10px' }} onClick={this.onDeleteAppointment} variant="secondary">Delete</Button>
                   <Card.Subtitle style={{ fontSize: '15px', margin: '13px 0px 13px 0px' }}>Date & Time: {appointment.date} at {appointment.duration}</Card.Subtitle>
                   <Card.Text style={{ fontSize: '15px' }}><strong>Cost: ${appointment.cost}</strong></Card.Text>
@@ -133,7 +133,7 @@ class OneAppointment extends Component {
     return (
       <div>
         <div style={{ alignItems: 'center', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
-          <h2>Lets Get To Work!</h2>
+          <h2>Check it out!</h2>
         </div>
         <div>
           {appointmentDisplay}
