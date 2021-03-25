@@ -1,7 +1,10 @@
 $primary: #ff741d;
 
 @import '~bootstrap/scss/bootstrap';
-
+.app-container {
+  width: 100%;
+  height: 100vh;
+}
 .modal-bg {
   background: $secondary;
 }
