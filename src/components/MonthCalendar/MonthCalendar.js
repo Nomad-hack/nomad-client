@@ -5,9 +5,9 @@ import { Scheduler, DayView, WeekView, Appointments, Toolbar, ViewSwitcher, Date
 
 // import { appointments } from '../../../demo-data/month-appointments'
 const schedulerData = [
-  { startDate: '2021-03-24T09:45', endDate: '2021-03-24T11:00', title: 'Meeting' },
-  { startDate: '2021-03-24T12:00', endDate: '2021-03-24T13:30', title: 'Go to a gym' },
-  { startDate: '2021-03-24T18:00', endDate: '2021-03-24T19:00', title: 'TV Time' }
+  { startDate: '2021-03-25T09:45', endDate: '2021-03-25T11:00', title: 'Meeting' },
+  { startDate: '2021-03-25T12:00', endDate: '2021-03-25T13:30', title: 'Go to a gym' },
+  { startDate: '2021-03-25T18:00', endDate: '2021-03-25T19:00', title: 'TV Time' }
 ]
 
 const today = new Date()

@@ -57,7 +57,7 @@ const AppointmentForm = ({ appointment, handleSubmit, handleChange }) => {
             <Form.Control
               type="text"
               name="duration"
-              placeholder="How long is class? (30 minutes)"
+              placeholder="What is the time block? (1:00pm - 3:00pm)"
               onChange={handleChange}
             />
           </Form.Group>
